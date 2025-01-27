@@ -7,7 +7,7 @@ require('lazy').setup({
   require 'ori/plugins/lspconfig',
   require 'ori/plugins/conform',
   require 'ori/plugins/cmp',
-  require 'ori/plugins/tokyonight',
+  require 'ori/plugins/colorscheme',
   require 'ori/plugins/todo-comments',
   require 'ori/plugins/mini',
   require 'ori/plugins/treesitter',
