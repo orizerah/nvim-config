@@ -15,4 +15,5 @@ require('lazy').setup({
   require 'ori/plugins/avante',
   require 'ori/plugins/alpha',
   require 'ori/plugins/commenter',
+  require 'ori/plugins/debug',
 }, {})
