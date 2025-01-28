@@ -13,6 +13,7 @@ require('lazy').setup({
   require 'ori/plugins/treesitter',
   require 'ori/plugins/hop',
   require 'ori/plugins/avante',
+  require 'ori/plugins/copilot',
   require 'ori/plugins/alpha',
   require 'ori/plugins/commenter',
   require 'ori/plugins/debug',
