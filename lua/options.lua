@@ -4,6 +4,13 @@ vim.opt.mouse = 'a'
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
+vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
+  group = vim.api.nvim_create_augroup('float_diagnostic', { clear = true }),
+  callback = function()
+    vim.diagnostic.open_float(nil, { focus = false })
+  end,
+})
+
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.

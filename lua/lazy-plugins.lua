@@ -17,4 +17,5 @@ require('lazy').setup({
   require 'ori/plugins/alpha',
   require 'ori/plugins/commenter',
   require 'ori/plugins/debug',
+  require 'ori/plugins/harpoon',
 }, {})
