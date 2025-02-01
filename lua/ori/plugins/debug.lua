@@ -13,16 +13,6 @@ return {
     config = function()
       local dap = require 'dap'
 
-      if LazyVim.has 'mason-nvim-dap.nvim' then
-        require('mason-nvim-dap').setup(LazyVim.opts 'mason-nvim-dap.nvim')
-      end
-
-      vim.api.nvim_set_hl(0, 'DapStoppedLine', { default = true, link = 'Visual' })
-
-      for name, sign in pairs(LazyVim.config.icons.dap) do
-        sign = type(sign) == 'table' and sign or { sign }
-        vim.fn.sign_define('Dap' .. name, { text = sign[1], texthl = sign[2] or 'DiagnosticInfo', linehl = sign[3], numhl = sign[3] })
-      end
 
       for _, language in ipairs(js_based_languages) do
         dap.configurations[language] = {
@@ -145,7 +135,6 @@ return {
       },
     },
     dependencies = {
-      { 'LazyVim/LazyVim' },
       {
         'microsoft/vscode-js-debug',
         -- After install, build it and rename the dist directory to out
