@@ -1,6 +1,6 @@
 require('lazy').setup({
   'tpope/vim-sleuth',
-
+  require 'ori/plugins/core',
   require 'ori/plugins/gitsigns',
   require 'ori/plugins/which-key',
   require 'ori/plugins/telescope',
@@ -18,4 +18,6 @@ require('lazy').setup({
   require 'ori/plugins/commenter',
   require 'ori/plugins/debug',
   require 'ori/plugins/harpoon',
+  require 'ori/plugins/git-dev',
+  require 'ori/plugins/ufo',
 }, {})
