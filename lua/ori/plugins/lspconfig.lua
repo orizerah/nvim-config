@@ -107,6 +107,7 @@ return {
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
       local servers = {
+        eslint = {},
         gopls = {},
 
         lua_ls = {
@@ -132,6 +133,9 @@ return {
             require('lspconfig')[server_name].setup(server)
           end,
         },
+      }
+      require('lspconfig').eslint.setup {
+        cmd = { 'vscode-eslint-language-server', '--stdio' },
       }
     end,
   },

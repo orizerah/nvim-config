@@ -34,6 +34,7 @@ return {
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
         typescript = { 'prettierd', 'prettier', stop_after_first = true },
         go = { 'goimports', 'gofmt' },
+        terraform = { 'terraform_fmt' },
       },
     },
   },

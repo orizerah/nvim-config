@@ -19,9 +19,20 @@ return {
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
     config = function()
-      require('telescope').setup {
+      local telescope = require 'telescope'
+      local telescopeConfig = require 'telescope.config'
+
+      local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
+
+      -- I want to search in hidden/dot files.
+      table.insert(vimgrep_arguments, '--hidden')
+      -- I don't want to search in the `.git` directory.
+      table.insert(vimgrep_arguments, '--glob')
+      table.insert(vimgrep_arguments, '!**/.git/*')
+      telescope.setup {
         defaults = {
-          file_ignore_patterns = { 'node_modules', '.git', 'dist/*' },
+          file_ignore_patterns = { 'node_modules', 'dist/*' },
+          vimgrep_arguments = vimgrep_arguments,
         },
         extensions = {
           ['ui-select'] = {
