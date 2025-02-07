@@ -20,4 +20,6 @@ require('lazy').setup({
   require 'ori/plugins/harpoon',
   require 'ori/plugins/git-dev',
   require 'ori/plugins/ufo',
+  require 'ori/plugins/floaterm',
+  require 'ori/plugins/surround',
 }, {})
