@@ -35,6 +35,7 @@ return {
         typescript = { 'prettierd', 'prettier', stop_after_first = true },
         go = { 'goimports', 'gofmt' },
         terraform = { 'terraform_fmt' },
+        ['terraform-vars'] = { 'terraform_fmt' },
       },
     },
   },
